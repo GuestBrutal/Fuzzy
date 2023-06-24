@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/login', 'Auth::login');
 
-$routes->get('/Dashboard', 'Dashboard::index', ['filter' => 'authfilter']);
+$routes->get('/Dashboard', 'Dashboard::index');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

@@ -6,6 +6,8 @@ class Home extends BaseController
 {
     public function index()
     {
-        return view('auth/login');
+        $session = session();
+        $session->destroy();
+        return redirect()->to('/dashboard');
     }
 }
