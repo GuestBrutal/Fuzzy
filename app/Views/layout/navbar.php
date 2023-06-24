@@ -14,14 +14,15 @@
                 <i class="fas fa-expand-arrows-alt"></i>
             </a>
         </li>
-        <li class="nav-item dropdown">
+        <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <img height=25pt width=25pt src="<?= base_url('assets'); ?>/images/default.png" class="img-circle elevation-2" alt="User Image">
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="/Auth/logout">Logout</a>
             </div>
-        </li>
+        </li> -->
+        >>>>>>> acron
     </ul>
 </nav>
 <!-- /.navbar -->

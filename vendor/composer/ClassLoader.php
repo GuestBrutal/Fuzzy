@@ -42,37 +42,35 @@ namespace Composer\Autoload;
  */
 class ClassLoader
 {
-    /** @var \Closure(string):void */
-    private static $includeFile;
-
-    /** @var string|null */
+    /** @var ?string */
     private $vendorDir;
 
     // PSR-4
     /**
-     * @var array<string, array<string, int>>
+     * @var array[]
+     * @psalm-var array<string, array<string, int>>
      */
     private $prefixLengthsPsr4 = array();
     /**
-     * @var array<string, list<string>>
+     * @var array[]
+     * @psalm-var array<string, array<int, string>>
      */
     private $prefixDirsPsr4 = array();
     /**
-     * @var list<string>
+     * @var array[]
+     * @psalm-var array<string, string>
      */
     private $fallbackDirsPsr4 = array();
 
     // PSR-0
     /**
-     * List of PSR-0 prefixes
-     *
-     * Structured as array('F (first letter)' => array('Foo\Bar (full prefix)' => array('path', 'path2')))
-     *
-     * @var array<string, array<string, list<string>>>
+     * @var array[]
+     * @psalm-var array<string, array<string, string[]>>
      */
     private $prefixesPsr0 = array();
     /**
-     * @var list<string>
+     * @var array[]
+     * @psalm-var array<string, string>
      */
     private $fallbackDirsPsr0 = array();
 
@@ -80,7 +78,8 @@ class ClassLoader
     private $useIncludePath = false;
 
     /**
-     * @var array<string, string>
+     * @var string[]
+     * @psalm-var array<string, string>
      */
     private $classMap = array();
 
@@ -88,29 +87,29 @@ class ClassLoader
     private $classMapAuthoritative = false;
 
     /**
-     * @var array<string, bool>
+     * @var bool[]
+     * @psalm-var array<string, bool>
      */
     private $missingClasses = array();
 
-    /** @var string|null */
+    /** @var ?string */
     private $apcuPrefix;
 
     /**
-     * @var array<string, self>
+     * @var self[]
      */
     private static $registeredLoaders = array();
 
     /**
-     * @param string|null $vendorDir
+     * @param ?string $vendorDir
      */
     public function __construct($vendorDir = null)
     {
         $this->vendorDir = $vendorDir;
-        self::initializeIncludeClosure();
     }
 
     /**
-     * @return array<string, list<string>>
+     * @return string[]
      */
     public function getPrefixes()
     {
@@ -122,7 +121,8 @@ class ClassLoader
     }
 
     /**
-     * @return array<string, list<string>>
+     * @return array[]
+     * @psalm-return array<string, array<int, string>>
      */
     public function getPrefixesPsr4()
     {
@@ -130,7 +130,8 @@ class ClassLoader
     }
 
     /**
-     * @return list<string>
+     * @return array[]
+     * @psalm-return array<string, string>
      */
     public function getFallbackDirs()
     {

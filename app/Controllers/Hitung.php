@@ -16,26 +16,37 @@ class Hitung extends BaseController
 
     public function index()
     {
-        $subkriteria = $this->subKriteria->get_subkriteria()->getResultArray();
+        if(null !== session()->get('hasil_akhir')){
+            $data = [
+                'title' => "FAHP - Kriteria",
+                'head' => "Data Kriteria",
+                'alternatif' => session()->get('hasil_akhir')
+            ];
 
-        $countIdKriteria = [];
-        foreach($subkriteria as $sub) {
-            if(!array_key_exists($sub['id_kriteria'], $countIdKriteria)){
-                $countIdKriteria[$sub['id_kriteria']] = 1;
-            } else {
-                $countIdKriteria[$sub['id_kriteria']] += 1;
+            return view('hitung/hasilakhir', $data);
+        }else{
+            $subkriteria = $this->subKriteria->get_subkriteria()->getResultArray();
+
+            $countIdKriteria = [];
+            foreach($subkriteria as $sub) {
+                if(!array_key_exists($sub['id_kriteria'], $countIdKriteria)){
+                    $countIdKriteria[$sub['id_kriteria']] = 1;
+                } else {
+                    $countIdKriteria[$sub['id_kriteria']] += 1;
+                }
             }
+
+            $data = [
+                'title' => "FAHP - Hasil Perhitungan",
+                'head' => "Hasil Perhitungan",
+                'kriteria' => $this->kriteria->get()->getResultArray(),
+                'subkriteria' => $subkriteria,
+                'alternatif' => $this->alternatif->get()->getResultArray(),
+                'totalSub' => $countIdKriteria,
+            ];
+            return view('hitung/index', $data);
         }
 
-        $data = [
-            'title' => "FAHP - Hasil Perhitungan",
-            'head' => "Hasil Perhitungan",
-            'kriteria' => $this->kriteria->get()->getResultArray(),
-            'subkriteria' => $subkriteria,
-            'alternatif' => $this->alternatif->get()->getResultArray(),
-            'totalSub' => $countIdKriteria,
-        ];
-        return view('hitung/index', $data);
     }
 
     public function fuzzy_matrix(){
@@ -368,6 +379,7 @@ class Hitung extends BaseController
 
     
     public function hasil_akhir(){
+        $session = session();
         $post = $this->request->getPost();
 
         $hasil_sub = json_decode($post['hasil_sub']);
@@ -455,12 +467,14 @@ class Hitung extends BaseController
         });  
         }
 
+        
+
         $data = [
             'title' => "FAHP - Kriteria",
             'head' => "Data Kriteria",
             'alternatif' => $data_akhir
         ];
-
+        session()->set('hasil_akhir',$data_akhir);
         return view('hitung/hasilakhir', $data);
 
     }
