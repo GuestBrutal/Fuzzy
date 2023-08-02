@@ -51,7 +51,7 @@
             <?php foreach ($kriteria as $row) : ?>
               <?php $cek = false; ?>
               <tr>
-                <th scope="row">K<?= ($i + 1 < 10) ? '0' . ($i + 1) : ($i + 1); ?></th>
+                <th scope="row">K<?= ($i + 1); ?></th>
                 <?php for ($j = 0; $j < count($kriteria); $j++) : ?>
                   <?php if ($cek == false) : ?>
                     <?php if ($i == $j) : ?>

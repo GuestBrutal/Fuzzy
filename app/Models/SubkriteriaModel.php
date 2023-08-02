@@ -8,12 +8,12 @@ class SubkriteriaModel extends Model
 {
     protected $table = 'subkriteria';
     protected $primaryKey = 'id';
-    protected $allowedFields = ['id', 'kode_subkriteria', 'subkriteria', 'created_at'];
+    protected $allowedFields = ['id','id_kriteria', 'kode_subkriteria', 'subkriteria', 'created_at'];
 
     public function get_subkriteria(){
         $query = $this->db->table('subkriteria')->select("*, subkriteria.id as id")
         ->join('kriteria', 'subkriteria.id_kriteria = kriteria.id')
-        ->orderBy('kode_subkriteria', 'ASC')->get();  
+        ->orderBy('id_kriteria', 'ASC')->get();  
        return $query;
     }
 
