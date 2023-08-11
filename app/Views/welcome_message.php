@@ -48,18 +48,10 @@
                                         <div class="row">
                                             <div class="col-md-9 col-sm-9 col-xs-9">
                                                 <div class="row">
-                                                    <div class="col-md-3 col-xs-3 col-sm-3">
-                                                        <a style="padding-top:0px;"
-                                                            class="navbar-brand navBrandText text-uppercase font-weight-bold"
-                                                            href="index.html"><img
-                                                                src="<?= base_url('assets'); ?>/home/img/logo/cemrebakerylogo.png"
-                                                                alt="restorant" /></a>
-
-                                                    </div>
-                                                    <div class="col-md-9 col-sm-9 col-xs-9">
-                                                        <a href="index.html"><img class="img-responsive logo"
-                                                                src="<?= base_url('assets'); ?>/home/img/logo/cemrebakerytextlogolight.png"
-                                                                alt="restorant" /></a>
+                                                    <div class="navbar-content">
+                                                        <h2>
+                                                            SPK
+                                                        </h2>
 
                                                     </div>
                                                 </div>
@@ -86,8 +78,8 @@
                                             <li class="nav-item"><a href="#section0"
                                                     class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Home
                                                     <span class="sr-only">(current)</span></a></li>
-                                            <li class="nav-item"><a href="#section2"
-                                                    class="nav-link text-uppercase font-weight-bold js-scroll-trigger">About</a>
+                                            <li class="nav-item"><a href="Dashboard"
+                                                    class="nav-link text-uppercase font-weight-bold js-scroll-trigger">Hitung</a>
                                             </li>
 
 
@@ -149,63 +141,14 @@
         </div>
     </section>
 
-    <!-- Section0 Area End -->
-    <!-- Section1 Start -->
-
-    <!-- Section1 End -->
-    <!-- Section2 Start -->
-    <section id="section2">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-xs-12 ">
-                    <div class="maintext text-center">
-                        <h2>Tentang Kopi</h2>
-                        <p>Biji kopi merupakan benih yang berasal dari buah kopi yang bergerombolan dalam tangkai,
-                            dengan kulit buah berwarna merah ketika sudah masak. Dibawah lapisan daging buah, terdapat
-                            dua keping biji yang sisi ratanya saling berhadapan satu sama lain, masing-masing
-                            diselubungi oleh lapisan tipis.</p>
-                        <p>Kopi merupakan salah satu jenis tanaman perkebunan yang sudah lama dibudidayakan dan memiliki
-                            nilai ekonomis yang lumayan tinggi. Kopi memiliki banyak spesies diantaranya adalah kopi
-                            robusta. </p>
-                        <p>Kopi robusta adalah tanaman budidaya berbentuk pohon yang termasuk dalam famili rubiaceae dan
-                            genus coffea. Saat ini lebih dari 90% dari areal pertanaman kopi indonesia terdiri atas kopi
-                            robusta. Kopi robusta merupakan keturunan beberapa spesies kopi, terutama Coffea Canephora.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- Section2 End -->
-    <!-- Banner Start -->
-
-
-    <!-- Banner End -->
-    <!-- Section3 Start -->
-    <!-- Section3 End -->
-    <!-- Testimonial Area Start -->
-
-    <!-- Testimonial Area End -->
-    <!-- Blog Area Start -->
-
-    <!-- Blog Area End -->
-    <!-- Contact Start -->
-
-    <!-- Contact End -->
-    <!-- Address Section Start -->
-
-
-    <!-- Adress Section End -->
-    <!-- Footer Start -->
     <footer class="footer-area">
 
         <div class="footer-bottom text-center">
             <div class="container">
                 <div class="row">
                     <div class="col-xs-12">
-                        <p>Copyright © <a href="https://cemrethemes.com" target="_blank">Cemrethemes</a> 2020. All Right
-                            Reserved By Cemrethemes.</p>
+                        <p>Copyright © Della Hayu</a> 2023. All Right
+                            Reserved By Della Hayu</p>
                     </div>
                 </div>
             </div>

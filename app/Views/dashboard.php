@@ -45,28 +45,35 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="col-12">
             <div class="card mt-10">
-                <center>
-                    <h4>Tentang Askha Jaya</h4>
-                </center>
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-    <center>  
-    <img class="d-block w-90" src="/assets/images/askha1.jpg" alt="First slide">
-</center>
-    </div>
-    <div class="carousel-item">
-      <img class="d-block w-100" src="..." alt="Second slide">
-    </div>
-  </div>
-</div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <center>
+                                <img class="d-block w-90" src="/assets/images/KOPI.jpg" alt="First slide">
+                            </center>
+                        </div>
+                    </div>
+                    <div class="maintext text-center">
+                        <h2>Tentang Kopi</h2>
+                        <p>Biji kopi merupakan benih yang berasal dari buah kopi yang bergerombolan dalam tangkai,
+                            dengan kulit buah berwarna merah ketika sudah masak. Dibawah lapisan daging buah, terdapat
+                            dua keping biji yang sisi ratanya saling berhadapan satu sama lain, masing-masing
+                            diselubungi oleh lapisan tipis.</p>
+                        <p>Kopi merupakan salah satu jenis tanaman perkebunan yang sudah lama dibudidayakan dan memiliki
+                            nilai ekonomis yang lumayan tinggi. Kopi memiliki banyak spesies diantaranya adalah kopi
+                            robusta. </p>
+                        <p>Kopi robusta adalah tanaman budidaya berbentuk pohon yang termasuk dalam famili rubiaceae dan
+                            genus coffea. Saat ini lebih dari 90% dari areal pertanaman kopi indonesia terdiri atas kopi
+                            robusta. Kopi robusta merupakan keturunan beberapa spesies kopi, terutama Coffea Canephora.
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>   
-        
-    </div>
+
+        </div>
     </div>
 </section>
 
@@ -74,8 +81,8 @@
 
 <?= $this->section('myscript'); ?>
 <script>
-    $(function() {
-        $('#example2').DataTable();
-    });
+$(function() {
+    $('#example2').DataTable();
+});
 </script>
 <?= $this->endSection(); ?>
