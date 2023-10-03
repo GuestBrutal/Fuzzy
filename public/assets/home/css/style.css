@@ -189,6 +189,12 @@ iframe {
   visibility: hidden;
 }
 
+.navbar-content h2 {
+  font-family: "Righteous";
+  font-size: 52px;
+  color: white;
+}
+
 .slide-content p {
   margin-bottom: 20px;
   margin-top: 20px;

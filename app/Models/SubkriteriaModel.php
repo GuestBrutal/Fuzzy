@@ -8,7 +8,11 @@ class SubkriteriaModel extends Model
 {
     protected $table = 'subkriteria';
     protected $primaryKey = 'id';
+<<<<<<< HEAD
     protected $allowedFields = ['id','id_kriteria', 'kode_subkriteria', 'subkriteria', 'created_at'];
+=======
+    protected $allowedFields = ['id', 'id_kriteria','kode_subkriteria', 'subkriteria', 'created_at'];
+>>>>>>> c2e79555635f32127614705d69a9a13076899658
 
     public function get_subkriteria(){
         $query = $this->db->table('subkriteria')->select("*, subkriteria.id as id")
